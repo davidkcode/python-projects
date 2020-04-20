@@ -112,4 +112,5 @@ class Gui:
             self.currentCode = self.game.activePlayer
 
 
-Gui()
+if __name__ == "__main__":
+    Gui()

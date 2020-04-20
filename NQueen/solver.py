@@ -89,5 +89,6 @@ class NQueenSolver:
             print("\n")
 
 
-solver = NQueenSolver(4)
-solver.solveNQueen()
+if __name__ == "__main__":
+    solver = NQueenSolver(4)
+    solver.solveNQueen()

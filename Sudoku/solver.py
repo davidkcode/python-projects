@@ -29,9 +29,11 @@ def printBoard():
     # just for styling purposes
     print("\n")
 
+
 def solveSudoku():
     solveCell()
     printBoard()
+
 
 def solveCell():
     # find empty place
@@ -55,6 +57,7 @@ def solveCell():
                 board[row][col] = 0
         return False
 
+
 def findNextEmpty():
     for i in range(0, 9):
         for j in range(0, 9):
@@ -62,12 +65,14 @@ def findNextEmpty():
                 return [i, j]
     return [9, 9]
 
+
 def emptyLeft():
     for i in range(0, 9):
         for j in range(0, 9):
             if board[i][j] == 0:
                 return False
     return True
+
 
 def isValid(row, col, value):
     #print("isValid function called")
@@ -104,6 +109,7 @@ def isValid(row, col, value):
 
     return True
 
+
 def checkSubsquares(row, col, value):
     if row <= 2 and col <= 2:
         for i in range(0, 3):
@@ -120,7 +126,7 @@ def checkSubsquares(row, col, value):
                     continue
                 else:
                     if board[i][j] == value:
-                        return True        
+                        return True
     elif row <= 2 and col > 5 and col <= 8:
         for i in range(0, 3):
             for j in range(6, 9):
@@ -180,5 +186,7 @@ def checkSubsquares(row, col, value):
 
     return False
 
-printBoard()
-solveSudoku()
+
+if __name__ == "__main__":
+    printBoard()
+    solveSudoku()
